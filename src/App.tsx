@@ -72,9 +72,9 @@ const App: React.FC = () => {
   useUserAgent()
 
   return (
-    <Router history={history}>
-      <ResetCSS />
-      <GlobalStyle />
+    <Router history={history}> // shows user history
+      <ResetCSS /> // css reseted component
+      <GlobalStyle /> // component sytles
       <GlobalCheckClaimStatus excludeLocations={[]} />
       <Menu>
         <SuspenseWithChunkError fallback={<PageLoader />}>
@@ -113,6 +113,9 @@ const App: React.FC = () => {
             <Route exact path="/prediction">
               <Predictions />
             </Route>
+//             <Route exact path="/bonus">
+//               <Predictions />
+//             </Route>
             <Route path="/prediction/leaderboard">
               <PredictionsLeaderboard />
             </Route>
